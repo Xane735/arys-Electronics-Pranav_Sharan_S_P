@@ -1,6 +1,6 @@
 # Battery Management System FSM (Verilog)
 
-## 📌 Overview
+## Overview
 This project implements a **Battery Management System Fault Detection FSM** in Verilog.  
 It monitors common battery pack fault conditions and transitions through four states:
 
@@ -13,7 +13,7 @@ The design uses **debounce and persistence filters** for each input flag to avoi
 
 ---
 
-## ⚡ Features
+## Features
 - **Debounce / Persistence** per fault type:
   - Overvoltage (OV)
   - Undervoltage (UV)
@@ -30,7 +30,7 @@ The design uses **debounce and persistence filters** for each input flag to avoi
 
 ---
 
-## 🗂️ File Structure
+## File Structure
 .
 ├── debounce_persist.v # Debounce/persistence counter module
 ├── bms_fsm.v # Main FSM with state machine logic
@@ -41,7 +41,7 @@ The design uses **debounce and persistence filters** for each input flag to avoi
 
 ---
 
-## 🏗️ How It Works
+## How It Works
 1. **Input flags** (`ov_raw`, `uv_raw`, `ot_raw`, `ut_raw`, `oc_raw`)  
    are gated by masks (`msk_*`) and fed into debounce modules.  
 
@@ -60,7 +60,7 @@ The design uses **debounce and persistence filters** for each input flag to avoi
 
 ---
 
-## ▶️ Simulation (Vivado)
+## ▶Simulation (Vivado)
 1. **Create project** in Vivado and add:
    - `debounce_persist.v`
    - `bms_fsm.v`
